@@ -1,0 +1,11 @@
+*{
+    box-sizing:border-box;
+}
+
+.title{
+    font-family:Instrument Serif, serif;
+}
+
+.subtitle{
+    font-family: SF Pro Display, sans-serif;
+}
