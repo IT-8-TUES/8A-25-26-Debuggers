@@ -4,43 +4,77 @@
     <title>Login Page</title>
     <link rel="icon" href="#">
 </head>
-
 <body>
     <header>
-        <h1>Login</h1>
+        <h1>Log in</h1>
     </header>
-
-    <nav>
-        <a href="#">Home</a>
-    </nav>
-
     <main>
         <section>
-            <h3>Login Form</h3>
-
             <p>
-                Please <em>enter</em> your account details.
+                Please enter your account details.
             </p>
-
             <table>
                 <tr>
                     <td>
                         <h6>Username</h6>
-                        <input type="text" placeholder="Enter username">
+                        <input 
+                            type="text" 
+                            id="username"
+                            placeholder="Enter username"
+                        >
                     </td>
-
                 </tr>
-
                 <tr>
-
                     <td>
                         <h6>Password</h6>
-                        <input type="password" placeholder="Enter password">
+                        <input 
+                            type="password" 
+                            id="password"
+                            placeholder="Enter password"
+                        >
                     </td>
-
+                </tr>
+                <tr>
+                    <td>
+                        <button type="button" onclick="signIn()">
+                            Log In
+                        </button>
+                    </td>
                 </tr>
             </table>
+            <p>
+                Create account if you don’t have one.
+            </p>
+            <button type="button" onclick="goToSignUp()">
+                Sign Up
+            </button>
+            <button type="button" onclick="goHome()">
+                Home
+            </button>
         </section>
     </main>
+    <footer>
+        <p>© 2026 Kartio</p>
+    </footer>
+    <script>
+        function signIn() {
+            let username = document.getElementById("username").value;
+            let password = document.getElementById("password").value;
+            if(username === "" || password === "") {
+                alert("Please enter username and password!");
+                return;
+            }
+            localStorage.setItem("username", username);
+            localStorage.setItem("password", password);
+            alert("Login successful!");
+            window.location.href = "homepage.html";
+        }
+        function goHome() {
+            window.location.href = "homepage.html";
+        }
+        function goToSignUp() {
+            window.location.href = "signin.html";
+        }
+    </script>
 </body>
 </html>
