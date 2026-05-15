@@ -12,7 +12,11 @@ const cardsContainer = document.getElementById("cardsContainer");
 // const noTransactions = document.getElementById("noTransactions");
 
 function showCards() {
+    let user = localStorage.getItem("loggedUser");
+    let cards = JSON.parse(localStorage.getItem(user + "_cards")) || [];
+
     cardsContainer.innerHTML = "";
+
     if (cards.length === 0) {
         noCards.style.display = "block";
     } else {
@@ -67,7 +71,8 @@ function addCard() {
     number: cardNumber
     });
 
-    localStorage.setItem("cards", JSON.stringify(cards));
+    let user = localStorage.getItem("username");
+    localStorage.setItem(user + "_cards", JSON.stringify(cards));
 
     //alert("Card added!");
 
@@ -134,6 +139,9 @@ function generateBarcode(cardNumber) {
 //}
 
 function showCardDetails(card_index) {
+    let user = localStorage.getItem("loggedUser");
+    let cards = JSON.parse(localStorage.getItem(user + "_cards")) || [];
+
     cardIndex = card_index;
     document.getElementById("cardDetails").style.display = "block";
     document.getElementById("homepage").style.display = "none";
@@ -293,12 +301,17 @@ function deleteCard()
         return;
     }
     cards.splice(cardIndex, 1);
-    localStorage.setItem("cards", JSON.stringify(cards));
+    let user = localStorage.getItem("loggedUser");
+    localStorage.setItem(user + "_cards", JSON.stringify(cards));
     alert("Card deleted!");
     window.location.href = "homepage.html";
     showCards();
     //gotoHome();
 }
+
+localStorage.setItem("username", username);
+localStorage.setItem("password", password);
+
 
 showCards();
 //showTransactions();
