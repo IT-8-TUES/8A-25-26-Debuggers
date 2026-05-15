@@ -12,7 +12,7 @@ const cardsContainer = document.getElementById("cardsContainer");
 // const noTransactions = document.getElementById("noTransactions");
 
 function showCards() {
-    let user = localStorage.getItem("loggedUser");
+    let user = localStorage.getItem("username");
     let cards = JSON.parse(localStorage.getItem(user + "_cards")) || [];
 
     cardsContainer.innerHTML = "";
@@ -139,7 +139,7 @@ function generateBarcode(cardNumber) {
 //}
 
 function showCardDetails(card_index) {
-    let user = localStorage.getItem("loggedUser");
+    let user = localStorage.getItem("username");
     let cards = JSON.parse(localStorage.getItem(user + "_cards")) || [];
 
     cardIndex = card_index;
@@ -301,7 +301,7 @@ function deleteCard()
         return;
     }
     cards.splice(cardIndex, 1);
-    let user = localStorage.getItem("loggedUser");
+    let user = localStorage.getItem("username");
     localStorage.setItem(user + "_cards", JSON.stringify(cards));
     alert("Card deleted!");
     window.location.href = "homepage.html";
