@@ -309,8 +309,8 @@ function deleteCard()
     //gotoHome();
 }
 
-localStorage.setItem("username", username);
-localStorage.setItem("password", password);
+// localStorage.setItem("username", username);
+// localStorage.setItem("password", password);
 
 
 showCards();
