@@ -1,27 +1,5 @@
 //log in 
 function signIn() {
-    let username = document.getElementById("username").value;
-    let password = document.getElementById("password").value;
-
-    if(username === "" || password === "") {
-        alert("Please enter username and password!");
-        return;
-    }
-
-    let storedUsername = localStorage.getItem("username");
-    let storedPassword = localStorage.getItem("password");
-
-    if(!storedUsername || !storedPassword) {
-        alert("No account found. Please sign up first.");
-        return;
-    }
-
-    if(username !== storedUsername || password !== storedPassword) {
-        alert("Invalid username or password.");
-        return;
-    }
-
-    alert("Login successful!");
     window.location.href = "homepage.html";
 }
 function goHome() {
