@@ -1,0 +1,37 @@
+body{
+    box-sizing: border-box;
+    margin:0;
+}
+
+.class{
+    font-size:18px;
+}
+
+.card-row{
+    cursor:pointer;
+}
+
+.card-label{
+    color:#e8e8e8;
+}
+
+.inner-title{
+     font-size:14px;
+     margin-top:4px;
+}
+
+.card-value{
+    color:#4a9eff;
+}
+
+.card{
+    cursor:pointer;
+    margin-top:4px;
+}
+
+.delete-acc{
+     font-size:14px;
+     color:#e05555;
+     text-align:center;
+     font-weight:500;
+}
