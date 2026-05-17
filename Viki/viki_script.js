@@ -1,8 +1,13 @@
-let cards = JSON.parse(localStorage.getItem("cards")) || [];
+//let cards = JSON.parse(localStorage.getItem("cards")) || [];
 // let transactions = [];
 // let transactionCurrency = "";
 // let transactionIndex = -1;
+
+let user = localStorage.getItem("username");
+let cards = JSON.parse(localStorage.getItem(user + "_cards")) || [];
+
 let cardIndex = -1;
+let cardindex;
 
 const noCards = document.getElementById("noCards");
 const cardsContainer = document.getElementById("cardsContainer");
@@ -12,8 +17,6 @@ const cardsContainer = document.getElementById("cardsContainer");
 // const noTransactions = document.getElementById("noTransactions");
 
 function showCards() {
-    let user = localStorage.getItem("username");
-    let cards = JSON.parse(localStorage.getItem(user + "_cards")) || [];
 
     cardsContainer.innerHTML = "";
 
@@ -28,11 +31,34 @@ function showCards() {
         div_card.classList.add("card");
 
         div_card.innerHTML = `
-            <button class="card-button" onclick="showCardDetails(${card_index})">${card.name}</button>
+            <button class="card-button" id="cardButton_${card_index}" onclick="showCardDetails(${card_index})">${card.name}</button>
         `;
+        cardindex = card_index;
         cardsContainer.appendChild(div_card);
+
+        let cardId = document.getElementById(`cardButton_${card_index}`);
+        if (cardId.textContent === "Kaufland") cardId.style.backgroundColor = "red";
+        else if (cardId.textContent === "Lidl") cardId.style.backgroundColor = "blue";
+        else if (cardId.textContent === "Lilly") cardId.style.backgroundColor = "lightblue";
+        else if (cardId.textContent === "DM") cardId.style.backgroundColor = "green";
+        else if (cardId.textContent === "Billa") cardId.style.backgroundColor = "red";
+        else if (cardId.textContent === "Bershka") cardId.style.backgroundColor = "black";
+        else if (cardId.textContent === "H&M") cardId.style.backgroundColor = "black";
+        else if (cardId.textContent === "Zara") cardId.style.backgroundColor = "black";
+        else if (cardId.textContent === "Decathlon") cardId.style.backgroundColor = "blue";
+        else if (cardId.textContent === "IKEA") cardId.style.backgroundColor = "darkblue";
+        else if (cardId.textContent === "Фантастико") cardId.style.backgroundColor = "red";
+        else if (cardId.textContent === "Technopolis") cardId.style.backgroundColor = "blue";
+        else if (cardId.textContent === "Technomarket") cardId.style.backgroundColor = "blue";
+        else if (cardId.textContent === "Metro") cardId.style.backgroundColor = "blue";
+        else if (cardId.textContent === "JYSK") cardId.style.backgroundColor = "blue";
+        else if (cardId.textContent === "SportDepot") cardId.style.backgroundColor = "blue";
+        else{
+            cardId.style.background = "linear-gradient(to right, blue, purple, magenta)";
+        }
     });
 }
+
 
 // function showTransactions() {
 //     transactionsContainer.innerHTML = "";

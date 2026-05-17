@@ -7,12 +7,15 @@
     </head>
     <body>
         <header class = "header">
-            <h1 class = "title">Kartio</h1>
+            <h1 class = "title" onclick="window.location.href = 'homepage.html'">Kartio</h1>
+            <div class = "add">
             <button id = "plusBtn" onclick=" window.location.href = 'add.html'">+</button>
+            </div>
         </header>
         <main>
             <section class = "section" id="homepage">
-                <p class = "subtitle">Welcome, <br/> ${username.value}</p>
+                <p class = "subtitle">Welcome,</p>
+                <p class="userName">${username.value}</p>
                 <!-- <p class = "name">your_name</p> -->
                 <!-- <p class = "subtitle">Total income</p> -->
                 <!-- <p class = "income">your_income</p> -->
@@ -20,7 +23,6 @@
                 <p id="noCards">No cards yet</p>
                 <div id="cardsContainer"></div>
             </section>
-    
             <section class="section" id = "cardDetails" style = "display:none;">
                 <p class = "subtitle">Card Details</p>
                 <p class = "subtitle">Card Name:</p>
@@ -32,12 +34,12 @@
                 <button id="deleteCardBtn" onclick="deleteCardQuestionfunc()">Delete Card</button>
                 <!-- <svg id="barcode"></svg> -->
             </section>
-            <section class="section" id="search" style="display:none;">
+            <!-- <section class="section" id="search" style="display:none;">
                 <h1 class = "subtitle">Search</h1>
-            </section>
-            <section class="section" id="your_account" style="display:none;">
+            </section> -->
+            <!-- <section class="section" id="your_account" style="display:none;">
                 <h1 class = "subtitle">Your Account</h1>
-            </section>
+            </section> -->
             <button class="adding-card-btn" style="display:none">Add Card</button>
             <!-- <section class="section" id="transactions">
                 <p class = "subtitle">Recent Transactions</p>
@@ -97,9 +99,9 @@
             </section>
         </main>
         <footer class = "footer">
-            <button class="home_btn" onclick=" window.location.href = 'homepage.html'">Home</button>
+            <button class="home_btn" onclick=" window.location.href = 'homepage.html'">🏠︎</button>
             <!-- <button class="search_btn">Search</button> -->
-            <button class="your_account_btn">Your Account</button>
+            <button class="your_account_btn">☺</button>
         </footer>
         <script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.5/dist/JsBarcode.all.min.js"></script>
         <script src="viki_script.js"></script>
