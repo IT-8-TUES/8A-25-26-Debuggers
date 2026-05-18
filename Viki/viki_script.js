@@ -38,7 +38,12 @@ function showCards() {
 
         let cardId = document.getElementById(`cardButton_${card_index}`);
         if (cardId.textContent === "Kaufland") cardId.style.backgroundColor = "red";
+        else if (cardId.textContent === "kaufland") cardsContainer.style.backgroundColor = "red";
+        else if (cardId.textContent === "KAUFLAND") cardsContainer.style.backgroundColor = "red";
         else if (cardId.textContent === "Lidl") cardId.style.backgroundColor = "blue";
+        else if (cardId.textContent === "Lidl") cardsContainer.style.backgroundColor = "red";
+        else if (cardId.textContent === "LIDL") cardsContainer.style.backgroundColor = "red";
+        else if (cardId.textContent === "lilly") cardsContainer.style.backgroundColor = "red";
         else if (cardId.textContent === "Lilly") cardId.style.backgroundColor = "lightblue";
         else if (cardId.textContent === "DM") cardId.style.backgroundColor = "green";
         else if (cardId.textContent === "Billa") cardId.style.backgroundColor = "red";
