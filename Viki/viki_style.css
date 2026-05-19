@@ -50,16 +50,15 @@ h1 {
     background-color: #6366f1;
 }
 
-main {
+/* main {
     width: 100%;
     padding: 20px;
     display: flex;
     justify-content: center;
-}
+} */
 
 .section {
-    width: 100%;
-    max-width: 420px;
+    width: 40%;
     padding: 20px;
     border-radius: 12px;
     background-color: #111827;
@@ -161,7 +160,7 @@ footer {
 
 .adding-card-btn {
     width: 80%;
-    padding: 16px;
+    padding: 7%;
     border: #9ca3af solid 1px;
     border-radius: 12px;
     font-size: 15px;
@@ -181,7 +180,6 @@ footer {
 }
 
 .card-button{
-    width: 90%;
     padding: 10px;
     border-radius: 12px;
     border: white solid 1px;
@@ -189,6 +187,12 @@ footer {
     font-weight: bold;
     font-size: 18px;
     margin: 10px 10px 10px 10px;
+    width: 100%;
+    cursor: pointer;
+    width: 25%;
+    height: 40%;
+    text-align: center;
+    padding: 10px;
 }
 
 .card-button:hover {
@@ -205,9 +209,103 @@ footer {
     background-color: transparent;
 }
 
-div_card {
+#barcodeEach{
     width: 100%;
-    padding: 0px;
+    padding: 10px;
+    display:flex;
+    justify-content: center;
+}
+
+#deleteCardBtn {
+    width: 80%;
+    height: 7%;
+    padding: 16px;
+    border: #9ca3af solid 1px;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #4f46e5;
+    text-align: center;
+    margin: 10px 10px 5px 40px;
+}
+
+#deleteCardBtn:hover {
+    color: #8680f2;
+}
+
+#deleteCardQuestion{
+    width: 40%;
+    height: 30%;
+    padding: 16px;
+    border: #9ca3af solid 1px;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: transparent;
+    text-align: center;
+    margin: 10px 10px 10px 30px;
+}
+footer {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+    background-color: #111827;
+    color: white;
+    position: sticky;
+    bottom: 0;
+    gap: 20px;
+}
+
+main {
+    display: flex;
+    width: 100%;
+    height:100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.deletetext{
+    justify-content: center;
+    align-items: center;
+}
+
+.deletebtn{
+    display: flex;
+    width: 10%;
+    height: 3%;
+    padding: 16px;
+    border: #9ca3af solid 1px;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    text-align: center;
+    margin: 20px 10px 10px 10px;
+}
+
+.deletebtndiv{
+    height: 5%;
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 }
