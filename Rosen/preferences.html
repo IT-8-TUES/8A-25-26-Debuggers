@@ -2,33 +2,36 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Preferences</title>
-    </head>
+    <link rel="stylesheet" href="rosen_style.css">
+</head>
 <body>
-<div class="phone-wrap">
-  <div class="shell">
-    <div class="screen">
-      <div class="sbar"></div>
-      <header class="header">
-        <div class="back-btn" onclick="window.location.href='index.html'"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg></div>
-        <div class="htitle" style="font-size:18px;">Preferences</div>
-      </header>
-      <div class="inner-body">
-        <div class="card">
-          <div class="card-row"><span class="card-label">Dark Mode</span><div class="toggle on" onclick="this.classList.toggle('on')"></div></div>
-          <div class="card-row"><span class="card-label">Push Notifications</span><div class="toggle on" onclick="this.classList.toggle('on')"></div></div>
-        </div>
-        <div class="inner-title">Display</div>
-        <div class="card">
-          <div class="card-row"><span class="card-label">Default Currency</span><span class="card-value">USD</span></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<footer>
-  <button class="home_btn" onclick=" window.location.href = 'homepage.html'">Home</button>
-  <button class="your_account_btn">Your Account</button>
-</footer>
+    <header>
+        <h1>Preferences</h1>
+    </header>
+
+    <main>
+        <section>
+            <p>Update your display and notification preferences.</p>
+            <table>
+                <tr>
+                    <td><button onclick="alert('Dark Mode is on')">Dark Mode</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="alert('Push Notifications are on')">Notifications</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="alert('Default Currency: USD')">Currency</button></td>
+                </tr>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <button onclick="window.location.href='homepage.html'">🏠︎</button>
+        <button onclick="window.location.href='settings.html'">Settings</button>
+    </footer>
+    <script src="rosen_script.js"></script>
 </body>
 </html>

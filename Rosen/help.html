@@ -4,37 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Help</title>
-    </head>
+    <link rel="stylesheet" href="rosen_style.css">
+</head>
 <body>
-<div class="phone-wrap">
-  <div class="shell">
-    <div class="screen">
-      <div class="sbar"></div>
-      <header class="header">
-        <div class="back-btn" onclick="window.location.href='index.html'"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg></div>
-        <div class="title">Help</div>
-      </header>
-      <main>
-      <div class="inner-body">
-        <div class="card">
-          <div class="card-row"><span class="card-label">How do I add a card?</span></div>
-          <div class="card-row"><span class="card-label">Why was my payment declined?</span></div>
-          <div class="card-row"><span class="card-label">How do I transfer funds?</span></div>
-          <div class="card-row"><span class="card-label">Can I use Wallet* abroad?</span></div>
-        </div>
-        <div class="inner-title">Contact Support</div>
-        <div class="card">
-          <div class="card-row"><span class="card-label">Email</span><span class="card-value">support@kartio.com</span></div>
-          <div class="card-row"><span class="card-label">Response time</span><span class="card-value">~2 hours</span></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-</main>
-<footer>
-  <button class="home_btn" onclick=" window.location.href = 'homepage.html'">Home</button>
-  <button class="your_account_btn">Your Account</button>
-</footer>
+    <header>
+        <h1>Help</h1>
+    </header>
+
+    <main>
+        <section>
+            <p>Find answers or contact support.</p>
+            <table>
+                <tr>
+                    <td><button onclick="alert('Add a card from Your Account.')">Add Card</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="alert('Check your balance and card details.')">Declined Payment</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="alert('Transfers can be made from your wallet page.')">Transfer Funds</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="alert('Email: support@kartio.com')">Contact Support</button></td>
+                </tr>
+            </table>
+        </section>
+    </main>
+
+ <footer>
+        <button onclick="window.location.href='homepage.html'">🏠︎</button>
+        <button onclick="window.location.href='settings.html'">Settings</button>
+    </footer>
+    <script src="rosen_script.js"></script>
 </body>
 </html>

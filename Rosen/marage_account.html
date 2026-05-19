@@ -2,32 +2,38 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Manage Account</title>
-    </head>
+    <link rel="stylesheet" href="rosen_style.css">
+</head>
 <body>
-<div class="phone-wrap">
-  <div class="shell">
-    <div class="screen">
-      <div class="sbar"></div>
-      <header class="header">
-        <div class="back-btn" onclick="window.location.href='index.html'"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg></div>
-        <div class="title">Your Account</div>
-      </header>
-      <div class="inner-body">
-        <div class="field-label">Display Name</div>
-        <input class="edit-field" id="field-name" placeholder="Default User" value="Default User" />
-        <div class="field-label">Email</div>
-        <input class="edit-field" id="field-email" placeholder="user@gmail.com" value="user@gmail.com" />
-        <div class="field-label">Phone</div>
-        <input class="edit-field" placeholder="+1 000 000 0000" value="+1 000 000 0000" />
-        <button class="save-btn" onclick="alert('Changes Saved!')">Save Changes</button>
-      </div>
-    </div>
-  </div>
-</div>
+    <header>
+        <h1>Your Account</h1>
+    </header>
+
+    <main>
+        <section>
+            <h6>Display Name</h6>
+            <input id="field-name" placeholder="Default User" value="Default User">
+
+            <h6>Email</h6>
+            <input id="field-email" placeholder="user@gmail.com" value="user@gmail.com">
+
+            <h6>Phone</h6>
+            <input placeholder="+1 000 000 0000" value="+1 000 000 0000">
+
+            <table>
+                <tr>
+                    <td><button onclick="alert('Changes Saved!')">Save Changes</button></td>
+                </tr>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <button onclick="window.location.href='homepage.html'">🏠︎</button>
+        <button onclick="window.location.href='settings.html'">Settings</button>
+    </footer>
+    <script src="rosen_script.js"></script>
 </body>
-<footer>
-  <button class="home_btn" onclick=" window.location.href = 'homepage.html'">Home</button>
-  <button class="your_account_btn">Your Account</button>
-</footer>
 </html>

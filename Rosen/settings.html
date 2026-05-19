@@ -2,35 +2,39 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Other Settings</title>
     <link rel="stylesheet" href="rosen_style.css">
-    </head>
+</head>
 <body>
-<div class="phone-wrap">
-  <div class="shell">
-    <div class="screen">
-      <div class="sbar"></div>
-      <header class="header">
-        <div class="back-btn" onclick="window.location.href='index.html'"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg></div>
-        <div class="title">Other Settings</div>
-      </header>
-      <main>
-      <div class="inner-body">
-        <div class="card">
-          <div class="card-row"><span class="card-label">Terms of Service</span><div class="mchev"><svg viewBox="0 0 24 24" width="14" height="14" stroke="#555" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></div></div>
-          <div class="card-row"><span class="card-label">Privacy Policy</span><div class="mchev"><svg viewBox="0 0 24 24" width="14" height="14" stroke="#555" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></div></div>
-        </div>
-        <div class="card">
-          <div class="delete-acc">Delete Account</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-</main>
-<footer>
-  <button class="home_btn" onclick=" window.location.href = 'homepage.html'">Home</button>
-  <button class="your_account_btn">Your Account</button>
-</footer>
+    <header>
+        <h1>Other Settings</h1>
+    </header>
+
+    <main>
+        <section>
+            <p>Choose which settings page you want to open.</p>
+            <table>
+                <tr>
+                    <td><button onclick="window.location.href='marage_account.html'">Your Account</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="window.location.href='preferences.html'">Preferences</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="window.location.href='security.html'">Security</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="window.location.href='help.html'">Help</button></td>
+                </tr>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <button onclick="window.location.href='homepage.html'">🏠︎</button>
+        <button onclick="window.location.href='settings.html'">Settings</button>
+    </footer>
+    <script src="rosen_script.js"></script>
 </body>
 </html>
