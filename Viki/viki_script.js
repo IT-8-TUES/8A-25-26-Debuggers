@@ -173,11 +173,13 @@ function deleteCard()
     showCards();
 }
 
-let usernameSavedSignup = document.getElementById("signupUsername");
+let username = localStorage.getItem("username");
 let welcome_section = document.getElementById("welcome-section");
+
 welcome_section.innerHTML = `
-    <p class = "subtitle">Welcome,</p>
-    <p class="userName">${usernameSavedSignup}</p>
-`
+    <p class="subtitle">Welcome,</p>
+    <p class="userName">${username}</p>
+`;
+
 
 showCards();

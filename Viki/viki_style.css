@@ -107,6 +107,10 @@ h1 {
     padding: 10px;
     cursor: default;
     background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
 }
 
 .home_btn, .your_account_btn {
@@ -184,7 +188,6 @@ h1 {
 
 .card-button:hover {
     opacity: 0.8;
-    color: white;
 }
 #cardsContainer{
     width: 100%;
