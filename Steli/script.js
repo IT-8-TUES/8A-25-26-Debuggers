@@ -51,7 +51,7 @@ function signIn() {
     goHome();
 }
 
-// sign up
+// sign up function
 function signUp() {
     let username = getValue("signupUsername");
     let email = getValue("signupEmail");
