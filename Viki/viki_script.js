@@ -20,16 +20,20 @@ function showCards() {
             <button class="card-button" id="cardButton_${card_index}" onclick="showCardDetails(${card_index})">${card.name}</button>
         `;
         cardindex = card_index;
+        let main = document.getElementById("main");
+        if (card_index == 5){
+            main.style.height=600
+        }
         cardsContainer.appendChild(div_card);
 
         let cardId = document.getElementById(`cardButton_${card_index}`);
         if (cardId.textContent === "Kaufland") cardId.style.backgroundColor = "red";
-        else if (cardId.textContent === "kaufland") cardsContainer.style.backgroundColor = "red";
-        else if (cardId.textContent === "KAUFLAND") cardsContainer.style.backgroundColor = "red";
+        else if (cardId.textContent === "kaufland") cardId.style.backgroundColor = "red";
+        else if (cardId.textContent === "KAUFLAND") cardId.style.backgroundColor = "red";
         else if (cardId.textContent === "Lidl") cardId.style.backgroundColor = "blue";
-        else if (cardId.textContent === "Lidl") cardsContainer.style.backgroundColor = "blue";
-        else if (cardId.textContent === "LIDL") cardsContainer.style.backgroundColor = "blue";
-        else if (cardId.textContent === "lilly") cardsContainer.style.backgroundColor = "lightblue";
+        else if (cardId.textContent === "Lidl") cardId.style.backgroundColor = "blue";
+        else if (cardId.textContent === "LIDL") cardId.style.backgroundColor = "blue";
+        else if (cardId.textContent === "lilly") cardId.style.backgroundColor = "lightblue";
         else if (cardId.textContent === "Lilly") cardId.style.backgroundColor = "lightblue";
         else if (cardId.textContent === "LILLY") cardId.style.backgroundColor = "lightblue";
         else if (cardId.textContent === "DM") cardId.style.backgroundColor = "lightgreen";
